@@ -1,0 +1,18 @@
+<?php $pageTitle='Dashboard'; include __DIR__.'/includes/page-start.php'; ?>
+<section class="welcome-row"><div><p class="eyebrow">SUNDAY, YOUR MONEY AT A GLANCE</p><h1>Good evening, Alex <span class="wave">✦</span></h1><p class="muted">A little clarity goes a long way. Here's your financial overview.</p></div><button class="primary-btn" data-add-transaction>＋ Add transaction</button></section>
+<section class="summary-grid">
+  <article class="summary-card balance-card"><div class="card-top"><span>Total balance</span><span class="stat-icon green-icon">◈</span></div><h2 data-total-balance>₹45,250</h2><p><span class="trend positive">↗ 8.2%</span> <span class="muted">vs. last month</span></p><div class="mini-line"></div></article>
+  <article class="summary-card"><div class="card-top"><span>Monthly income</span><span class="stat-icon blue-icon">↗</span></div><h2 data-total-income>₹35,000</h2><p><span class="trend positive">↗ 4.5%</span> <span class="muted">this month</span></p><div class="card-accent income-accent"></div></article>
+  <article class="summary-card"><div class="card-top"><span>Monthly expenses</span><span class="stat-icon coral-icon">↘</span></div><h2 data-total-expenses>₹18,750</h2><p><span class="trend negative">↗ 2.1%</span> <span class="muted">vs. last month</span></p><div class="card-accent expense-accent"></div></article>
+  <article class="summary-card"><div class="card-top"><span>Monthly savings</span><span class="stat-icon lavender-icon">✧</span></div><h2 data-total-savings>₹16,250</h2><p><span class="trend positive">↗ 12.8%</span> <span class="muted">saved this month</span></p><div class="card-accent savings-accent"></div></article>
+</section>
+<section class="dashboard-grid">
+  <article class="panel chart-panel"><div class="panel-heading"><div><h3>Money flow</h3><p class="muted">Income vs. expenses</p></div><select id="chartPeriod" class="soft-select"><option value="6">Last 6 months</option><option value="3">Last 3 months</option></select></div><div class="chart-wrap"><canvas id="incomeExpenseChart"></canvas></div></article>
+  <article class="panel category-panel"><div class="panel-heading"><div><h3>Where it goes</h3><p class="muted">Expense breakdown</p></div><button class="text-button" onclick="location.href='reports.php'">Details ↗</button></div><div class="donut-wrap"><canvas id="expenseCategoryChart"></canvas><div class="donut-center"><strong>₹18,750</strong><small>Total spent</small></div></div><div class="category-legend" id="categoryLegend"></div></article>
+</section>
+<section class="dashboard-grid lower-grid">
+  <article class="panel"><div class="panel-heading"><div><h3>Monthly budgets</h3><p class="muted">Keep spending on track</p></div><a class="text-button" href="budgets.php">View all ↗</a></div><div id="budgetPreview" class="budget-list"></div></article>
+  <article class="panel"><div class="panel-heading"><div><h3>Savings goals</h3><p class="muted">Small steps, big progress</p></div><a class="text-button" href="savings.php">View all ↗</a></div><div id="goalPreview" class="goal-list"></div></article>
+</section>
+<section class="panel recent-panel"><div class="panel-heading"><div><h3>Recent transactions</h3><p class="muted">Your latest money movements</p></div><a class="text-button" href="transactions.php">See all transactions ↗</a></div><div class="table-wrap"><table><thead><tr><th>TRANSACTION</th><th>CATEGORY</th><th>DATE</th><th>PAYMENT</th><th class="align-right">AMOUNT</th></tr></thead><tbody id="recentTransactions"></tbody></table></div></section>
+<?php include __DIR__.'/includes/page-end.php'; ?>

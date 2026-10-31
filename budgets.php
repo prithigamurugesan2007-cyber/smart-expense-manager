@@ -1,0 +1,5 @@
+<?php $pageTitle='Budgets'; include __DIR__.'/includes/page-start.php'; ?>
+<section class="page-heading"><div><p class="eyebrow">PLAN A LITTLE, SAVE A LOT</p><h1>Monthly budgets</h1><p class="muted">Give every rupee a purpose.</p></div><button class="primary-btn" id="addBudget">＋ Add budget</button></section>
+<section class="summary-grid compact-summary"><article class="summary-card"><div class="card-top"><span>Total planned</span><span class="stat-icon green-icon">▤</span></div><h2 id="budgetTotal">₹12,500</h2><p class="muted">Monthly category budgets</p></article><article class="summary-card"><div class="card-top"><span>Amount spent</span><span class="stat-icon coral-icon">↘</span></div><h2 id="budgetSpent">₹8,500</h2><p class="muted">Across tracked categories</p></article><article class="summary-card"><div class="card-top"><span>Left to spend</span><span class="stat-icon blue-icon">✧</span></div><h2 id="budgetLeft">₹4,000</h2><p class="muted">Keep your goals in sight</p></article></section>
+<section class="budget-grid" id="budgetGrid"></section>
+<?php include __DIR__.'/includes/page-end.php'; ?>

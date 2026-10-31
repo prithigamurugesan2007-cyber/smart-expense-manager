@@ -1,0 +1,1 @@
+</div><?php include __DIR__.'/footer.php'; ?></main></div><div id="modalRoot"></div><div id="toast" class="toast" role="status"></div><script src="assets/js/app.js"></script></body></html>

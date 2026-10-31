@@ -1,0 +1,1 @@
+<footer class="footer">Made for mindful money management <span>•</span> <b>Smart Expense</b> <span class="demo-note">Demo project — no real financial accounts connected.</span></footer>

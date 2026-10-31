@@ -1,0 +1,3 @@
+<?php if (!isset($pageTitle)) { $pageTitle = 'Dashboard'; } ?>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title><?= htmlspecialchars($pageTitle) ?> | Smart Expense</title><link rel="stylesheet" href="assets/css/style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><div class="app-shell">
+<?php include __DIR__.'/sidebar.php'; ?><main class="main-content"><?php include __DIR__.'/header.php'; ?><div class="page-content" data-page="<?= htmlspecialchars(basename($_SERVER['PHP_SELF'] ?? 'index.php')) ?>">
